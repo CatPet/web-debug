@@ -107,6 +107,13 @@
             </div>
         </div>
     </div>
+    <script>
+        let art = document.querySelectorAll('pre')[0];
+        let artWidth = window.getComputedStyle(art).getPropertyValue('width');
+        if (window.screen.width < parseFloat(artWidth)) {
+            art.setAttribute('style', 'transform: scale(0.5)');
+        }
+    </script>
 </body>
 
 </html>
