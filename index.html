@@ -1,0 +1,109 @@
+<html>
+<meta charset="utf-8">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .desktop {
+            display: block;
+        }
+
+        .mobile {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .desktop {
+                display: none;
+            }
+
+            .mobile {
+                display: block;
+            }
+
+            .border-box {
+                border: 5px double black;
+                box-sizing: border-box;
+                margin: 20px;
+                padding: 20px;
+                position: relative;
+            }
+
+            .intersected-text {
+                position: absolute;
+                top: -15px;
+                left: 0;
+                right: 0;
+                text-align: center;
+            }
+
+            .intersected-text span {
+                padding: 0 0px;
+                font-family: 'Lucida Console';
+                line-height: 6px;
+                font-size: 6px;
+                position: relative;
+                z-index: 1;
+            }
+
+            .intersected-text::before {
+                content: "";
+                position: absolute;
+                top: 10%;
+                left: 5%;
+                right: 5%;
+                height: 20px;
+                background: white;
+                z-index: 0;
+            }
+        }
+
+        .centered-content {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="center-content">
+        <div style="display: inline-block; text-align: left;">
+            <div class="desktop">
+                <pre>
+                        <!-- TODO -->
+                    </pre>
+            </div>
+        </div>
+
+        <div class="center-content">
+            <div class="mobile">
+                <div class="mobile border-box">
+                    <div class="intersected-text">
+                        <span>
+                            ███╗&nbsp;&nbsp;&nbsp;███╗&nbsp;█████╗&nbsp;██████╗&nbsp;███████╗██╗&nbsp;&nbsp;██╗&nbsp;█████╗&nbsp;██╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />████╗&nbsp;████║██╔══██╗██╔══██╗██╔════╝██║&nbsp;&nbsp;██║██╔══██╗██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />██╔████╔██║███████║██████╔╝███████╗███████║███████║██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />██║╚██╔╝██║██╔══██║██╔══██╗╚════██║██╔══██║██╔══██║██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />██║&nbsp;╚═╝&nbsp;██║██║&nbsp;&nbsp;██║██║&nbsp;&nbsp;██║███████║██║&nbsp;&nbsp;██║██║&nbsp;&nbsp;██║███████╗███████╗<br />╚═╝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╚═╝╚═╝&nbsp;&nbsp;╚═╝╚═╝&nbsp;&nbsp;╚═╝╚══════╝╚═╝&nbsp;&nbsp;╚═╝╚═╝&nbsp;&nbsp;╚═╝╚══════╝╚══════╝
+                        </span>
+                    </div>
+                    <p style="text-align: center;"><span
+                            style="font-family: 'Courier New', monospace; line-height: 14px; font-size: 14px; display: inline-block;">
+                            <b>━━━━━ PROFESSIONAL SUMMARY ━━━━━</b><br>
+                            My professional summary
+                        </span></p>
+                    <p style="text-align: center;"><span
+                            style="font-family: 'Courier New', monospace;; line-height: 14px; font-size: 14px; display: inline-block;">
+                            <b>━━━━━ CERTIFICATIONS ━━━━━</b><br>
+                            VMWARE CERTIFIED PROFESSIONAL - DATA CENTER VIRTUALIZATION 2020<br>
+                            <!-- add other certs -->
+                        </span></p>
+                    <p style="text-align: center;"><span
+                            style="font-family: 'Courier New', monospace;; line-height: 14px; font-size: 14px; display: inline-block;">
+                            <b>━━━━━ RELEVANT EXPERIENCE ━━━━━</b><br>
+                            <b>company // City // DEC 2021 – CURRENT</b><br>
+                            <b><i>title</i></b><br>
+                            I do things here
+                </div>
+            </div>
+
+</body>
+
+</html>
