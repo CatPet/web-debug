@@ -34,20 +34,19 @@
                 top: -15px;
                 left: 0;
                 right: 0;
-                display: flex;
-                justify-content: center;
+                text-align: center;
             }
 
-            .intersected-text pre {
+            .intersected-text span {
                 padding: 0 0px;
-                font-family: 'Lucida Console';
-                line-height: 1;
+                font-family: 'Courier New', monospace;
+                /* font-family: 'Lucida Console'; */
+                line-height: 6px;
                 font-size: 6px;
                 white-space: pre-line;
                 position: relative;
-                text-align: left;
-                display: flex;
                 z-index: 1;
+                letter-spacing: -0.05em;
             }
 
             .intersected-text::before {
@@ -84,9 +83,9 @@
             <div class="mobile">
                 <div class="mobile border-box">
                     <div class="intersected-text" style="font-family: 'Courier New', monospace;">
-                        <pre>
+                        <span>
                             ███╗&nbsp;&nbsp;&nbsp;███╗&nbsp;█████╗&nbsp;██████╗&nbsp;███████╗██╗&nbsp;&nbsp;██╗&nbsp;█████╗&nbsp;██╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██╗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />████╗&nbsp;████║██╔══██╗██╔══██╗██╔════╝██║&nbsp;&nbsp;██║██╔══██╗██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />██╔████╔██║███████║██████╔╝███████╗███████║███████║██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />██║╚██╔╝██║██╔══██║██╔══██╗╚════██║██╔══██║██╔══██║██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;██║&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />██║&nbsp;╚═╝&nbsp;██║██║&nbsp;&nbsp;██║██║&nbsp;&nbsp;██║███████║██║&nbsp;&nbsp;██║██║&nbsp;&nbsp;██║███████╗███████╗<br />╚═╝&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;╚═╝╚═╝&nbsp;&nbsp;╚═╝╚═╝&nbsp;&nbsp;╚═╝╚══════╝╚═╝&nbsp;&nbsp;╚═╝╚═╝&nbsp;&nbsp;╚═╝╚══════╝╚══════╝
-                        </pre>
+                        </span>
                     </div>
                     <p style="text-align: center;"><span
                             style="font-family: 'Courier New', monospace; line-height: 14px; font-size: 14px; display: inline-block;">
@@ -110,13 +109,6 @@
             </div>
         </div>
     </div>
-    <script>
-        let art = document.querySelectorAll('pre')[0];
-        let artWidth = window.getComputedStyle(art).getPropertyValue('width');
-        if (window.screen.width < parseFloat(artWidth)) {
-            art.setAttribute('style', 'transform: scale(0.5)');
-        }
-    </script>
 </body>
 
 </html>
